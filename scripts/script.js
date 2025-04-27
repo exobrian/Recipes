@@ -37,6 +37,20 @@ function showIngredient(imageSrc) {
     }
   });
   
+  // Event listener for mouse click anywhere on the image or modal
+  document.getElementById('ingredientModal').addEventListener('click', function(event) {
+    if (event.target === this) {  // Close modal if the click is on the background (not the image)
+      closeModal();
+    }
+  });
+  
+  // Event listener for touch click anywhere on the image or modal
+  document.getElementById('ingredientModal').addEventListener('touchstart', function(event) {
+    if (event.target === this) {  // Close modal if the touch is on the background (not the image)
+      closeModal();
+    }
+  });
+
   // Close modal when clicking the close button
   document.getElementById('closeModal').addEventListener('click', closeModal);
   
