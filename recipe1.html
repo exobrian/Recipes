@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Recipe Landing Page</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+
+    <div id="nav-container"></div> <!-- Placeholder for the dynamic nav -->
+
+  <main>
+    <h1 id="recipe1">Japchae</h1>
+
+    <section class="ingredients">
+      <h2>Ingredients</h2>
+      <ul style="list-style-type:square">
+        <li><a onclick="showIngredient('./assets/images/kelpnoodles.png')">8oz Kelp Noodles</a></li>
+        <li><a onclick="showIngredient('./assets/images/seafoodmushrooms.jpeg')">1 Package of Seafood Mushrooms (Roots Cut Off and Pulled Apart)</a></li>
+        <li><a onclick="showIngredient('./assets/images/sesameoil.jpg')">Roasted Sesame Oil</a></li>
+        <li>8oz Chuck Roast (Sliced Thinly Against the Grain)</li>
+        <li>8oz Shrimp Peeled</li>
+        <li>4 Cloves Minced Garlic</li>
+        <li>4 Tablespoons of Soy Sauce</li>
+        <li>1 Onion Sliced</li>
+        <li>4 Green Onions Sliced Thinly</li>
+        <li>2 Eggs</li>
+        <li>1 Tablespoon Erythritol (or sweetener of choice)</li>
+        <li>1/2 Teaspoon of Pepper</li>
+        <li>2 Tablespoons of Baking Soda</li>
+        <li>Pinch of Sesame Seeds (Optional)</li>
+      </ul>
+    </section>
+
+    <section class="steps">
+      <h2>Steps</h2>
+      <ol>
+        <li>Mix 2 tablespoons of soy sauce, 2 cloves of minced garlic, 1 tablespoon of erythritol, and 1/4 teaspoon of pepper. Add chuck roast and mix thoroughly. Set aside to marinate.</li>
+        <li>Bring to a boil a pot of water. While it's heating up, place kelp noodles into large heat proof container. Add 2 tablespoons of baking soda. Then add boiling water to the bowl and stir. Let sit. This will soften the noodles. Set aside for now.</li>
+        <li>In a wok or large skillet on high heat, add a little bit of oil. Let heat up then add 2 scrambled eggs. Let cook then flip. Once done, remove from heat and slice into thin ribbons. Place into a large bowl.</li>
+        <li>In the same wok or skillet, add a bit more oil. Fry onions until soft then add the rest of the garlic. Fry until fragrant then remove and add to bowl of cooked ingredients.</li>
+        <li>Fry the mushrooms until all the water is released and evaporated. Once mushrooms brown a bit, remove and add to the bowl.</li>
+        <li>Stir fry the beef and shrimp together. Cook in small batches to avoid overcrowding the pan. Remove from heat and add to the bowl.</li>
+        <li>Drain the noodles into a collander and rinse with water. Shake to dry off as much water as possible. Add to bowl of cooked ingredients.</li>
+        <li>Mix 2 tablespoons of soy sauce, 2 cloves of minced garlic, 1 tablespoon of erythritol, and 1/4 teaspoon of pepper. Add to the bowl of ingredients and mix.</li>
+        <li>Stir fry all cooked ingredients together one more time to heat up. Add additional servings of the sauce if needed in the ratios of the previous step.</li>
+        <li>Serve with a pinch of sliced green onions and sesame seeds. Enjoy!</li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- Modal for ingredient images -->
+  <div id="ingredientModal">
+    <div id="ingredientModalContent">
+      <span id="closeModal">&times;</span>
+      <img id="ingredientImage" src="" alt="Ingredient Image">
+    </div>
+  </div>
+
+  <script src="./scripts/script.js"></script>
+
+</body>
+</html>

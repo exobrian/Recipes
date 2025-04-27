@@ -1,3 +1,17 @@
+ // Function to load the navigation menu dynamically
+ function loadNav() {
+    const navContainer = document.getElementById('nav-container');
+    fetch('./nav.html')  // Fetch the nav.html file
+      .then(response => response.text())  // Convert the response to text
+      .then(data => {
+        navContainer.innerHTML = data;  // Insert the navigation HTML into the page
+      })
+      .catch(error => console.error('Error loading navigation:', error));
+  }
+  
+  // Call the loadNav function when the page loads
+  document.addEventListener('DOMContentLoaded', loadNav);
+
 // Function to show the ingredient image
 function showIngredient(imageSrc) {
     const modal = document.getElementById('ingredientModal');
@@ -25,4 +39,6 @@ function showIngredient(imageSrc) {
   
   // Close modal when clicking the close button
   document.getElementById('closeModal').addEventListener('click', closeModal);
+  
+ 
   
