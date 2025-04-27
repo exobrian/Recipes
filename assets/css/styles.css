@@ -1,0 +1,109 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Layout */
+  body {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Sidebar navigation */
+  nav {
+    width: 220px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  }
+  
+  nav h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+    border-radius: 4px;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #555;
+  }
+  
+  /* Main content */
+  main {
+    flex: 1;
+    padding: 40px;
+    background: #f9f9f9;
+  }
+  
+  /* Ingredients and steps sections */
+  .ingredients, .steps {
+    margin-top: 30px;
+  }
+  
+  .ingredients ul {
+    list-style: none;
+  }
+  
+  .ingredients li a {
+    color: #007BFF;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  /* Modal styles */
+#ingredientModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  align-items: center;
+}
+
+#ingredientModal.show {
+  display: flex;
+}
+
+#ingredientModalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Prevent images from overflowing */
+}
+
+#ingredientModalContent img {
+  max-width: 100%;  /* Make sure image doesn't exceed container width */
+  max-height: 80vh;  /* Limit height to 80% of the viewport */
+  width: auto;       /* Allow image width to adjust to maintain aspect ratio */
+  height: auto;      /* Allow height to scale proportionally */
+  border-radius: 8px; /* Optional: rounded corners */
+}
